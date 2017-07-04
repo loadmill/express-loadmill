@@ -1,9 +1,11 @@
 export = Loadmill;
 
-/**
- * Create Loadmill middleware according to given options.
- */
-declare function Loadmill(options?: LoadmillOptions): (req, res, next) => any;
+declare const Loadmill: {
+    /**
+     * Create Loadmill middleware according to given options.
+     */
+    (options?: LoadmillOptions): (req, res, next) => any
+};
 
 type LoadmillOptions = {
     /**
