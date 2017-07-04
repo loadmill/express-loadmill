@@ -48,7 +48,7 @@ function setPreFlightHeaders(res, allowedMethod, allowedHeaders) {
 }
 
 function verifyDomain(token, req, res, next) {
-    if (token && req.url.startsWith("/loadmill-challenge/" + token + ".txt")) {
+    if (token && req.url.indexOf("/loadmill-challenge/" + token + ".txt") === 0) {
         res.send(token);
     }
     else {
