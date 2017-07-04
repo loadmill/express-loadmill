@@ -1,6 +1,6 @@
 {
   "name": "express-loadmill",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Express middleware to enable crowdsourced load simulations via loadmill.com",
   "keywords": [
     "loadmill",
