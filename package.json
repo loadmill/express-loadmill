@@ -11,6 +11,7 @@
     "ci"
   ],
   "main": "index.js",
+  "typings": "index.d.ts",
   "repository": "https://github.com/loadmill/express-loadmill.git",
   "author": "itaysabato <itay@loadmill.com>",
   "license": "MIT"
