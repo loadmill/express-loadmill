@@ -1,0 +1,17 @@
+{
+  "name": "express-loadmill",
+  "version": "0.0.1",
+  "description": "Express middleware to enable crowdsourced load simulations via loadmill.com",
+  "keywords": [
+    "loadmill",
+    "cors",
+    "load-testing",
+    "express",
+    "node",
+    "ci"
+  ],
+  "main": "index.js",
+  "repository": "https://github.com/loadmill/express-loadmill.git",
+  "author": "itaysabato <itay@loadmill.com>",
+  "license": "MIT"
+}
