@@ -1,17 +1,18 @@
 
 module.exports = function (options) {
-    var enableCors = !options || options.enableCors == null || options.enableCors;
     var token = options && options.verifyToken;
+    var enableCookies = options && options.enableCookies;
+    var enableCors = !options || options.enableCors == null || options.enableCors;
 
     return function (req, res, next) {
-        checkCors(enableCors, req, res, function () {
+        checkCors({enableCors: enableCors, enableCookies: enableCookies}, req, res, function () {
             return verifyDomain(token, req, res, next);
         });
     };
 };
 
-function checkCors(enableCors, req, res, next) {
-    if (enableCors) {
+function checkCors(corsOptions, req, res, next) {
+    if (corsOptions.enableCors) {
         var origin = req.header("Origin");
         var requestMethod = req.header("Access-Control-Request-Method");
 
@@ -19,6 +20,10 @@ function checkCors(enableCors, req, res, next) {
             || origin === "https://www.loadmill.com") {
 
             res.header("Access-Control-Allow-Origin", origin);
+
+            if (corsOptions.enableCookies) {
+                res.header("Access-Control-Allow-Credentials", 'true');
+            }
 
             if (req.method === 'OPTIONS' && origin && requestMethod) {
                 // It's a pre-flight request:

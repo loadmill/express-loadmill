@@ -32,6 +32,14 @@ Domain verification will only be enabled if you supply a verification token, thu
 app.use(Loadmill());
 ```
 
+## Cookies
+To enable cookies being sent to and from the server (by setting `Access-Control-Allow-Credentials` response header), 
+set the `enableCookies` option to `true`, e.g.
+```js
+app.use(Loadmill({enableCookies: true, verifyToken: process.env.LOADMILL_VERIFY_TOKEN}));
+```
+Note that you will also need to enable cookies for your test in the **Advanced Settings** section of your test configuration.
+
 ## Learn More
 - About [Loadmill](https://www.loadmill.com)
 - About [domain verification](https://docs.loadmill.com/domain-verification.html)
