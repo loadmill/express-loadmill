@@ -1,15 +1,36 @@
 
 module.exports = function (options) {
-    var token = options && options.verifyToken;
+    var verifyToken = options && options.verifyToken;
     var enableCookies = options && options.enableCookies;
     var enableCors = !options || options.enableCors == null || options.enableCors;
 
+    if (options && options.monitor) {
+      activateMonitoring(options.monitor);
+    }
+
     return function (req, res, next) {
         checkCors({enableCors: enableCors, enableCookies: enableCookies}, req, res, function () {
-            return verifyDomain(token, req, res, next);
+            return verifyDomain(verifyToken, req, res, next);
         });
     };
 };
+
+function activateMonitoring(monitorOptions) {
+  if (monitorOptions.enabled == null || monitorOptions.enabled) {
+    var loadmillMonitor;
+
+    try {
+      loadmillMonitor = require('loadmill-monitor');
+    }
+    catch (err) {
+      console.error("Failed to require optional dependency 'loadmill-monitor' - " +
+        "did you remember to add it as a dependency to your package.json file?");
+      throw err;
+    }
+
+    loadmillMonitor(monitorOptions);
+  }
+}
 
 function checkCors(corsOptions, req, res, next) {
     if (corsOptions.enableCors) {
@@ -52,9 +73,9 @@ function setPreFlightHeaders(res, allowedMethod, allowedHeaders) {
     });
 }
 
-function verifyDomain(token, req, res, next) {
-    if (token && req.url.indexOf("/loadmill-challenge/" + token + ".txt") === 0) {
-        res.send(token);
+function verifyDomain(verifyToken, req, res, next) {
+    if (verifyToken && req.url.indexOf("/loadmill-challenge/" + verifyToken + ".txt") === 0) {
+        res.send(verifyToken);
     }
     else {
         return next();

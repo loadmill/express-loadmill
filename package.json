@@ -1,6 +1,6 @@
 {
   "name": "express-loadmill",
-  "version": "0.0.6",
+  "version": "0.1.0-beta",
   "description": "Express middleware to enable crowdsourced load simulations via loadmill.com",
   "keywords": [
     "loadmill",
@@ -14,5 +14,8 @@
   "typings": "index.d.ts",
   "repository": "https://github.com/loadmill/express-loadmill.git",
   "author": "itaysabato <itay@loadmill.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "optionalDependencies": {
+    "loadmill-monitor": "^1.0.0"
+  }
 }
