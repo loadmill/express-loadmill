@@ -6,9 +6,9 @@ async-limiter@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/async-limiter/-/async-limiter-1.0.0.tgz#78faed8c3d074ab81f22b4e985d79e8738f720f8"
 
-loadmill-monitor@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/loadmill-monitor/-/loadmill-monitor-1.0.0.tgz#67487f490306fde5dc184e69db80ae71168df8ed"
+loadmill-monitor@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/loadmill-monitor/-/loadmill-monitor-1.0.1.tgz#059270e455309f93f3244017de3212094f26d03d"
   dependencies:
     ws "^5.1.1"
 
