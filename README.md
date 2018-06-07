@@ -45,7 +45,7 @@ Note that you will also need to enable cookies for your test in the **Advanced S
 By enabling performance monitoring, samples of CPU and memory usage of the Node process will be sent to Loadmill
 (only during load testing) and will be displayed alongside client-side metrics in your performance metrics charts.
 
-![express-loadmill](metrics-chart.png)
+![express-loadmill](metrics-charts.png)
 
 The monitoring module is an optional dependency, therefore **_you must install it._**
 
