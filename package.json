@@ -1,6 +1,6 @@
 {
   "name": "express-loadmill",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Express middleware to enable crowdsourced load simulations via loadmill.com",
   "keywords": [
     "loadmill",
@@ -8,6 +8,10 @@
     "load-testing",
     "express",
     "node",
+    "apm",
+    "monitoring",
+    "performance",
+    "performance-testing",
     "ci"
   ],
   "main": "index.js",

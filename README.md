@@ -57,7 +57,7 @@ Using yarn:
 
 `yarn add express-loadmill loadmill-monitor`
 
-To enable monitoring you must supply a personal API token (note this is **_not_** the same as `verifyToken`):
+To enable monitoring, you need to configure `monitor` options with a personal API token (note this is **_not_** the same as `verifyToken`):
 ```js
 app.use(Loadmill({
     verifyToken: process.env.LOADMILL_VERIFY_TOKEN,
