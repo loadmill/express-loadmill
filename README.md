@@ -45,6 +45,16 @@ Note that you will also need to enable cookies for your test in the **Advanced S
 By enabling performance monitoring, samples of CPU and memory usage of the Node process will be sent to Loadmill
 (only during load testing) and will be displayed alongside client-side metrics in your performance metrics charts.
 
+The monitoring module is an optional dependency, therefore **_you must install it._**
+
+Using npm:
+
+`npm install express-loadmill loadmill-monitor --save`
+
+Using yarn:
+
+`yarn add express-loadmill loadmill-monitor`
+
 To enable monitoring you must supply a personal API token (note this is **_not_** the same as `verifyToken`):
 ```js
 app.use(Loadmill({
