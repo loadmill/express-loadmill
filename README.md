@@ -47,7 +47,7 @@ By enabling performance monitoring, samples of CPU and memory usage of the Node 
 
 ![express-loadmill](metrics-charts.png)
 
-The monitoring module is an optional dependency, therefore **_you must install it._**
+The monitoring module is an optional dependency, therefore **_you must install it._** Before installing, make sure you are using Node version **v6.1.0 or higher.**
 
 Using npm:
 
