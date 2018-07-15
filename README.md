@@ -1,7 +1,7 @@
 # Express Loadmill
 Users of [Loadmill](https://www.loadmill.com) can use this express middleware for: 
-1. Quick and easy [domain verification](https://docs.loadmill.com/domain-verification.html).
-2. Enabling CORS **strictly** from [loadmill.com](https://www.loadmill.com) in order to perform [crowdsourced load tests](https://docs.loadmill.com/testing-with-cors.html).
+1. Quick and easy [domain verification](https://docs.loadmill.com/setup/domain-verification).
+2. Enabling CORS **strictly** from [loadmill.com](https://www.loadmill.com) in order to perform [crowdsourced load tests](https://docs.loadmill.com/setup/testing-with-cors).
 3. Sample [performance metrics of the Node process](#monitoring) to be viewed alongside client-side metrics during a load test.
 
 ## Installation
@@ -74,5 +74,5 @@ app.use(Loadmill({
 
 ## Learn More
 - About [Loadmill](https://www.loadmill.com)
-- About [domain verification](https://docs.loadmill.com/domain-verification.html)
-- About [testing with CORS](https://docs.loadmill.com/testing-with-cors.html)
+- About [domain verification](https://docs.loadmill.com/setup/domain-verification)
+- About [testing with CORS](https://docs.loadmill.com/setup/testing-with-cors)
