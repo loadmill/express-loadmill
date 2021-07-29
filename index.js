@@ -38,7 +38,10 @@ function checkCors(corsOptions, req, res, next) {
         var requestMethod = req.header("Access-Control-Request-Method");
 
         if (origin === "http://www.loadmill.com"
-            || origin === "https://www.loadmill.com") {
+            || origin === "https://www.loadmill.com"
+            || origin === "http://app.loadmill.com"
+            || origin === "https://app.loadmill.com"
+            ) {
 
             res.header("Access-Control-Allow-Origin", origin);
 
